@@ -4,7 +4,7 @@ import '../components-styles/header.css'
 const Header = () => {
 
   function handleClick(){
-    //Open the pop up log in module
+    //Open the pop up login module
   }
   
   return (

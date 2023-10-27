@@ -6,7 +6,9 @@
 }
 
 .main__title{
-    background-color: gray;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    font-weight: lighter;
     padding: 6px 8%;
     box-shadow: 0 1px 5px 0 black;
 
