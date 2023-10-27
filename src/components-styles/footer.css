@@ -1,0 +1,57 @@
+.footer {
+    display: flex;
+    flex-direction:  column;
+    background-color: rgb(25, 25, 25);
+    padding: 50px 8%;
+    color: white;
+    font-weight: lighter;
+    gap: 20px;
+
+}
+
+.footer__nav {
+    display: flex;
+    font-size: 13px;
+
+}
+
+.footer__nav__link {
+    padding: 0 12px;
+    border-right: 1px solid white;
+
+}
+
+.footer__nav__link:first-child {
+    padding: 0 12px 0 0;
+    border-right: 1px solid white;
+
+}
+
+.footer__nav__link:last-child {
+    padding: 0 12px;
+    border-right: none;
+
+}
+
+.footer__copyrights {
+    font-size: 12px;
+    color: rgb(187, 187, 187);
+}
+
+.footer__contact {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer__contact__socials {
+    display: flex;
+    gap: 15px;
+
+}
+
+.footer__contact__download {
+    display: flex;
+    gap: 15px;
+
+}

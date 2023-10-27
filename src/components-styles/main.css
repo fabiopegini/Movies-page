@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    gap: 40px
+}
+
+.main__title{
+    background-color: gray;
+    padding: 6px 8%;
+    box-shadow: 0 1px 5px 0 black;
+
+}
+
+.main__nav{
+    display: flex;
+    padding: 0 8%;
+    gap: 20px;
+
+}
+
+.main__nav__item{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main__nav__item__img{
+    width: 200px;
+
+}
