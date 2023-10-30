@@ -15,7 +15,7 @@ const Products = ({catalog,reference}) => {
   arrOfProducts.forEach((product,index) => {
     arr[index] = <ItemLi name={product.title} imgUrl={product.images["Poster Art"].url} key={product.title}/>
   })
-  return arr.slice(0,20)
+  return arr.slice(0,renderPerPage)
 }
 
 export default Products

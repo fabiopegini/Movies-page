@@ -13,12 +13,11 @@ const catalog = getCatalog()
 
 const Pages = () => {
 
-  const {page, setPage} = useContext(PagesContext)
+  const {page} = useContext(PagesContext)
 
   return (
     <main className='main'>
-      <h2 className='main__title'>Popular {page}</h2>
-      <button onClick={() => setPage("Titles")}>Home</button>
+      <h2 className='main__title'>Popular {page}</h2>      
       <section className='main__nav'>
         {page === 'Titles'
         ? <MainNav />
