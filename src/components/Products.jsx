@@ -4,8 +4,21 @@ import { renderPerPage } from '../constants'
 
 function getProducts(catalog,reference){
   let arr = []
-  arr = catalog.filter((product) => product.programType === reference
+  arr = catalog.filter((product) => {
+    return (
+      product.programType === reference
+      && 
+      product.releaseYear >= 2010
+    )
+  }
   )
+  
+  arr.sort((a,b) => {
+    if(a.title < b.title) return -1
+    if(a.title > b.title) return 1
+    return 0
+  })
+
   return arr
 }
 
