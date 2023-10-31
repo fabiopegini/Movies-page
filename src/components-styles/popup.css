@@ -1,0 +1,51 @@
+.modalpu {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modalpu__box {
+    background: rgb(8,8,8);
+    background: linear-gradient(180deg, rgb(21, 21, 21) 3%, rgb(60, 60, 60) 100%);;
+    width: 80%;
+    height: fit-content;
+    padding: 15px 0;
+    border-radius: 15px;
+    border: 2px solid antiquewhite;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.modalpu__box__title {
+    font-size: 35px;
+    color: antiquewhite;
+    
+}
+
+.modalpu__box__description {
+    font-size: 15px;
+    color: antiquewhite;
+    padding: 15px;
+
+}
+
+.modalpu__box__year {
+    color: antiquewhite;
+
+}
+
+.modalpu__box__img {
+    width: 20vh;
+
+}

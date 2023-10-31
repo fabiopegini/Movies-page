@@ -26,7 +26,7 @@ const Products = ({catalog,reference}) => {
   let arrOfProducts = getProducts(catalog,reference)
   let arr = []
   arrOfProducts.forEach((product,index) => {
-    arr[index] = <ItemLi name={product.title} imgUrl={product.images["Poster Art"].url} key={product.title}/>
+    arr[index] = <ItemLi name={product.title} imgUrl={product.images["Poster Art"].url} releaseYear={product.releaseYear} description={product.description} key={product.title}/>
   })
   return arr.slice(0,renderPerPage)
 }

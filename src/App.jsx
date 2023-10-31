@@ -5,10 +5,11 @@ import Footer from './components/Footer'
 import { useContext } from 'react'
 import { LoginContext } from './contexts/loginContext'
 import LoginModal from './components/LoginModal'
+import Popup from './components/Popup'
 
 function App() {
 
-  const {loginModal} = useContext(LoginContext)
+  const {loginModal, popupInfo} = useContext(LoginContext)
 
   return (
     <>
@@ -17,7 +18,14 @@ function App() {
         ? <LoginModal />
         : null
       }
-    
+
+      {
+      popupInfo.open === true 
+      ?
+      <Popup />
+      : null
+      }
+
       <Header />
 
       <Main />
