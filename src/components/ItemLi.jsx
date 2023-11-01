@@ -4,7 +4,7 @@ import { LoginContext } from '../contexts/loginContext'
 
 const ItemLi = ({ name, page = null , imgUrl, releaseYear = null, description = null  }) => {
   const {setPage} = useContext(PagesContext)
-  const {popupInfo, setPopupInfo} = useContext(LoginContext)
+  const {setPopupInfo} = useContext(LoginContext)
 
   function handlePopup() {
     if(page) return

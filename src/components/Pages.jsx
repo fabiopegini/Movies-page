@@ -1,29 +1,34 @@
-import React, { useContext } from 'react'
-import mockURL from '../mocks/url.json'
+import React, { useContext} from 'react'
 import Products from "../components/Products";
 import MainNav from "../components/MainNav";
 import { PagesContext } from '../contexts/pagesContext';
-
-
-function getCatalog() {
-  return mockURL.entries
-}
-
-const catalog = getCatalog()
+import useCatalog from '../hooks/useCatalog';
 
 const Pages = () => {
 
   const {page} = useContext(PagesContext)
 
+  const {catalog, loading, error} = useCatalog()
+
   return (
     <main className='main'>
       <h2 className='main__title'>Popular {page}</h2>      
       <section className='main__nav'>
-        {page === 'Titles'
+        {
+        page === 'Titles'
         ? <MainNav />
-        : (page === 'Series'
-          ? <Products catalog={catalog} reference={'series'}/> 
-          : <Products catalog={catalog} reference={'movie'}/>)}
+        : (error !== null
+          ? <p>{error}</p> 
+          : (page === 'Series' 
+            ? (loading 
+              ? <p>Loading...</p>
+              : <Products catalog={catalog} reference={'series'}/> )
+            : (loading 
+              ? <p>Loading...</p>
+              : <Products catalog={catalog} reference={'movie'}/>)
+            )
+          )
+        }
       </section>
     </main>
   )
